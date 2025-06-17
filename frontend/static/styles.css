@@ -1,0 +1,132 @@
+/* ===== Base Styles ===== */
+:root {
+  --primary: #6E48AA;
+  --primary-dark: #4A2C7C;
+  --secondary: #9D50BB;
+  --text: #333333;
+  --text-light: #777777;
+  --bg: #f8f9fa;
+  --card-bg: #ffffff;
+  --border: #e0e0e0;
+  --success: #4CAF50;
+  --error: #f44336;
+  --warning: #FFC107;
+}
+
+[data-theme="dark"] {
+  --primary: #9D50BB;
+  --primary-dark: #6E48AA;
+  --secondary: #6E48AA;
+  --text: #f0f0f0;
+  --text-light: #cccccc;
+  --bg: #121212;
+  --card-bg: #1e1e1e;
+  --border: #333333;
+}
+
+/* ===== Global Styles ===== */
+.stApp {
+  background-color: var(--bg) !important;
+  color: var(--text);
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.3s ease;
+}
+
+/* ===== Typography ===== */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 2.5rem;
+}
+
+/* ===== Buttons ===== */
+.stButton>button {
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  color: white !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 0.6rem 1.2rem !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.stButton>button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* ===== Cards ===== */
+.css-1aumxhk {
+  background: var(--card-bg) !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important;
+  padding: 1.5rem !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.css-1aumxhk:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1) !important;
+}
+
+/* ===== File Uploader ===== */
+.stFileUploader {
+  border: 2px dashed var(--primary) !important;
+  border-radius: 12px !important;
+  padding: 2rem !important;
+  background-color: rgba(110, 72, 170, 0.05) !important;
+  transition: all 0.3s ease;
+}
+
+.stFileUploader:hover {
+  border-color: var(--secondary) !important;
+  background-color: rgba(157, 80, 187, 0.1) !important;
+}
+
+/* ===== Progress Bar ===== */
+.stProgress > div > div > div > div {
+  background: linear-gradient(45deg, var(--primary), var(--secondary)) !important;
+}
+
+/* ===== Theme Toggle ===== */
+#theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  border-radius: 50% !important;
+  width: 50px;
+  height: 50px;
+  padding: 0 !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.stMarkdown, .stAlert, .stExpander {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* ===== Custom Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
